@@ -6,9 +6,9 @@ namespace design_pattern.Interpreter
    {
       public void Run()
       {
-         var str = "order x20 'Sajjad Seifi PRODUCT' From Coco";
+         var str = "order x20 'Sajjad Seifi PRODUCT' from Coco";
          GGql q = GGql.Interpreter(str);
-         Console.WriteLine($"qty={q.qty} \n product={q.product} \n source={q.source}");
+         Console.WriteLine($"\n qty={q.qty} \n product={q.product} \n source={q.source}");
 
       }
    }

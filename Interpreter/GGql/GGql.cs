@@ -1,10 +1,11 @@
+using System;
 using System.Text.RegularExpressions;
 
 namespace design_pattern.Interpreter
 {
    public class GGql
    {
-      private readonly string _command = GramerRepresentation.orderCommand;
+      private static readonly string _command = GramerRepresentation.orderCommand;
       public int qty { get; set; }
       public string product { get; set; }
       public string source { get; set; }
@@ -16,9 +17,9 @@ namespace design_pattern.Interpreter
       }
       public static GGql Interpreter(string str)
       {
-         Regex _regex = new Regex(GramerRepresentation.orderCommand);
+         Regex _regex = new Regex(_command);
          var matchs = _regex.Match(str);
-
+         Console.Write(matchs.Success);
          if (!matchs.Success)
             return null;
 
