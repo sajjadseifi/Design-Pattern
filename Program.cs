@@ -1,5 +1,4 @@
-﻿using System;
-using design_pattern.itrator;
+﻿using design_pattern.Interpreter;
 
 namespace design_pattern
 {
@@ -7,8 +6,10 @@ namespace design_pattern
    {
       static void Main(string[] args)
       {
-         //  Itrator itrator = new Itrator();
+         // Itrator itrator = new Itrator();
          //  itrator.Run();
+         Interpret interpreter = new Interpret();
+         interpreter.Run();
       }
    }
 }

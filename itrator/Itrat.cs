@@ -1,8 +1,8 @@
 using System;
 
-namespace design_pattern.itrator
+namespace design_pattern.Itrator
 {
-   public class Itrator : IRun
+   public class Itrat : IRun
    {
       public void Run()
       {

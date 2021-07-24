@@ -1,4 +1,4 @@
-namespace design_pattern.itrator
+namespace design_pattern.Itrator
 {
    public class Node<T>
    {
