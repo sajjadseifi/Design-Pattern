@@ -1,6 +1,8 @@
-﻿using design_pattern.ChainOfResposibility;
-using design_pattern.Interpreter;
-using design_pattern.Interpreter.Calc;
+﻿// using design_pattern.ChainOfResposibility;
+// using design_pattern.Command;
+// using design_pattern.Interpreter;
+// using design_pattern.Interpreter.Calc;
+using design_pattern.Test;
 
 namespace design_pattern
 {
@@ -14,8 +16,12 @@ namespace design_pattern
          // interpreter.Run();
          // Calc calc = new Calc();
          // calc.Run();
-         ChainOfResposibile cor = new ChainOfResposibile();
-         cor.Run();
+         // ChainOfResposibile cor = new ChainOfResposibile();
+         // cor.Run();
+         // Cmd cmd = new Cmd();
+         // cmd.Run();
+         var testRun = new TestRuntime();
+         testRun.Run();
       }
    }
 }
