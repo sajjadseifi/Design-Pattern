@@ -2,7 +2,9 @@
 // using design_pattern.Command;
 // using design_pattern.Interpreter;
 // using design_pattern.Interpreter.Calc;
+using design_pattern.Observer;
 using design_pattern.Test;
+using design_pattern.Test.Observer;
 
 namespace design_pattern
 {
@@ -20,8 +22,12 @@ namespace design_pattern
          // cor.Run();
          // Cmd cmd = new Cmd();
          // cmd.Run();
-         var testRun = new TestRuntime();
-         testRun.Run();
+         // var testRun = new TestRuntime();
+         // testRun.Run();
+         // var Obs = new TestObserver();
+         // Obs.Run();
+         Runner runner = new Runner();
+         runner.Run();
       }
    }
 }
