@@ -52,10 +52,10 @@ namespace design_pattern.Test.Observer
          if (_observers.Contains(observer))
             return;
 
-         this.PostMessage($"{observer.name} Joined in chat!");
+         JoinedMessage(observer.name);
          _observers.Add(observer);
       }
-
+      private void JoinedMessage(string obsName) => PostMessage($"{obsName} Joined in chat!");
       public void UnRegister(IObserver obj)
       {
          lock (_checklock)
