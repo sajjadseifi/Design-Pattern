@@ -6,6 +6,7 @@ using design_pattern.Observer;
 using design_pattern.Test;
 using design_pattern.Test.Observer;
 using Design_Pattern.Memento;
+using Design_Pattern.Strategy;
 
 namespace design_pattern
 {
@@ -29,8 +30,10 @@ namespace design_pattern
             // Obs.Run();
             // Runner runner = new Runner();
             // runner.Run();
-            Mem mem = new Mem();
-            mem.Run();
+            // Mem mem = new Mem();
+            // mem.Run();
+            Client client = new Client();
+            client.Run();
         }
     }
 }
