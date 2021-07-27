@@ -5,6 +5,7 @@
 using design_pattern.Observer;
 using design_pattern.Test;
 using design_pattern.Test.Observer;
+using Design_Pattern.AbstractFactory;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
 using Design_Pattern.Proxy;
@@ -48,8 +49,10 @@ namespace design_pattern
             // Proxy proxy = new Proxy();
             // proxy.Run();
 
-            Factory factory = new Factory();
-            factory.Run();
+            // Factory factory = new Factory();
+            // factory.Run();
+            AbstractFactory absfac = new AbstractFactory();
+            absfac.Run();
         }
     }
 }
