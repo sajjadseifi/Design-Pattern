@@ -6,6 +6,7 @@ using design_pattern.Observer;
 using design_pattern.Test;
 using design_pattern.Test.Observer;
 using Design_Pattern.Memento;
+using Design_Pattern.Proxy;
 using Design_Pattern.state;
 using Design_Pattern.Strategy;
 using Design_Pattern.Template;
@@ -41,8 +42,11 @@ namespace design_pattern
             // client.Run();
             // Visitor visitor = new Visitor();
             // visitor.Run();
-            Template template = new Template();
-            template.Run();
+            // Template template = new Template();
+            // template.Run();
+            // Proxy proxy = new Proxy();
+            // proxy.Run();
+
         }
     }
 }
