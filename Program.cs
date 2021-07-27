@@ -8,6 +8,7 @@ using design_pattern.Test.Observer;
 using Design_Pattern.Memento;
 using Design_Pattern.state;
 using Design_Pattern.Strategy;
+using Design_Pattern.Visitor;
 
 namespace design_pattern
 {
@@ -37,6 +38,8 @@ namespace design_pattern
             // client.Run();
             // ClientState client = new ClientState();
             // client.Run();
+            // Visitor visitor = new Visitor();
+            // visitor.Run();
         }
     }
 }
