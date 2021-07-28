@@ -1,4 +1,4 @@
-namespace Design_Pattern.Decorator
+namespace Design_Pattern.Decorator.ComponentDec
 {
     public interface IComponent
     {
