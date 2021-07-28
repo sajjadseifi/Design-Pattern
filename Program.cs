@@ -7,6 +7,7 @@ using design_pattern.Test;
 using design_pattern.Test.Observer;
 using Design_Pattern.AbstractFactory;
 using Design_Pattern.Bridg.MultiMailProvider;
+using Design_Pattern.Builder;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
 using Design_Pattern.Proxy;
@@ -53,8 +54,10 @@ namespace design_pattern
             // factory.Run();
             // AbstractFactory absfac = new AbstractFactory();
             // absfac.Run();
-            MultiMailProvider mmp = new MultiMailProvider();
-            mmp.Run();
+            // MultiMailProvider mmp = new MultiMailProvider();
+            // mmp.Run();
+            BuilerRunner builder = new BuilerRunner();
+            builder.Run();
         }
     }
 }
