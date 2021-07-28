@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using design_pattern;
 using Design_Pattern.Adapter.Bank;
+using Design_Pattern.Adapter.Employee;
 using Design_Pattern.Adapter.RealAdapter;
 
 namespace Design_Pattern.Adapter
@@ -9,12 +11,24 @@ namespace Design_Pattern.Adapter
     {
         public void Run()
         {
-            // 
-            // ICreditCard targetInterface = new BankCustomer();
-            // targetInterface.generateBankDetails();
-            // Console.WriteLine(targetInterface.getCreditCard());
+            // CreditCard();
+            // ReadAdapter();
+            Employee();
+        }
+        public void Employee()
+        {
+            List<string> empList = new List<string>();
 
-            // 
+            empList.Add("Prakash");
+            empList.Add("Amit");
+            empList.Add("Pankaj");
+
+            IEmployee emp = new EmployeeAdapter();
+
+            emp.PrintEmployee(empList);
+        }
+        public void RealAdapter()
+        {
             ISocketAdapter sockAdapter = new SocketObjectAdapterImpl();
             Volt v3 = ReadAdapter.GetVolt(sockAdapter, 3);
             Volt v12 = ReadAdapter.GetVolt(sockAdapter, 12);
@@ -33,6 +47,12 @@ namespace Design_Pattern.Adapter
             Console.WriteLine("v12 volts using Class Adapter =" + v12.GetVolts());
             Console.WriteLine("v120 volts using Class Adapter =" + v120.GetVolts());
 
+        }
+        private void CreditCard()
+        {
+            ICreditCard targetInterface = new BankCustomer();
+            targetInterface.generateBankDetails();
+            Console.WriteLine(targetInterface.getCreditCard());
         }
     }
 }
