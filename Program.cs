@@ -14,6 +14,7 @@ using Design_Pattern.Decorator;
 using Design_Pattern.Facade;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
+using Design_Pattern.NullObject;
 using Design_Pattern.Prototype;
 using Design_Pattern.Proxy;
 using Design_Pattern.state;
@@ -71,9 +72,10 @@ namespace design_pattern
             // prototype.Run();
             // Composite composite = new Composite();
             // composite.Run();
-            Facade facade = new Facade();
-            facade.Run();
-
+            // Facade facade = new Facade();
+            // facade.Run();
+            NullObject no = new NullObject();
+            no.Run();
         }
     }
 }
