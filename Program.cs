@@ -11,6 +11,7 @@ using Design_Pattern.Bridg.MultiMailProvider;
 using Design_Pattern.Builder;
 using Design_Pattern.Composite;
 using Design_Pattern.Decorator;
+using Design_Pattern.Facade;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
 using Design_Pattern.Prototype;
@@ -70,6 +71,9 @@ namespace design_pattern
             // prototype.Run();
             // Composite composite = new Composite();
             // composite.Run();
+            Facade facade = new Facade();
+            facade.Run();
+
         }
     }
 }
