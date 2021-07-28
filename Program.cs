@@ -6,6 +6,7 @@ using design_pattern.Observer;
 using design_pattern.Test;
 using design_pattern.Test.Observer;
 using Design_Pattern.AbstractFactory;
+using Design_Pattern.Adapter;
 using Design_Pattern.Bridg.MultiMailProvider;
 using Design_Pattern.Builder;
 using Design_Pattern.Decorator;
@@ -59,9 +60,10 @@ namespace design_pattern
             // mmp.Run();
             // BuilerRunner builder = new BuilerRunner();
             // builder.Run();
-            Decorator decorator = new Decorator();
-            decorator.Run();
-
+            // Decorator decorator = new Decorator();
+            // decorator.Run();
+            Adapter adapter = new Adapter();
+            adapter.Run();
         }
     }
 }
