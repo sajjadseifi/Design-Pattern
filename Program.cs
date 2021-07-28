@@ -9,6 +9,7 @@ using Design_Pattern.AbstractFactory;
 using Design_Pattern.Adapter;
 using Design_Pattern.Bridg.MultiMailProvider;
 using Design_Pattern.Builder;
+using Design_Pattern.Composite;
 using Design_Pattern.Decorator;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
@@ -65,8 +66,10 @@ namespace design_pattern
             // decorator.Run();
             // Adapter adapter = new Adapter();
             // adapter.Run();
-            Prototype prototype = new Prototype();
-            prototype.Run();
+            // Prototype prototype = new Prototype();
+            // prototype.Run();
+            // Composite composite = new Composite();
+            // composite.Run();
         }
     }
 }
