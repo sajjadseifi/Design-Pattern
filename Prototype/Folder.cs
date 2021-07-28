@@ -64,7 +64,9 @@ namespace Design_Pattern.Prototype
         }
         public Folder Clone()
         {
-            Thread.Sleep(50);
+            var start = new DateTime();
+            var sleep = 100;
+            Thread.Sleep(sleep);
             var clonedFiles = new List<File>();
             var clonedChildes = new List<Folder>();
             var newName = _name + " (1)";
@@ -74,7 +76,7 @@ namespace Design_Pattern.Prototype
 
             if (_childes.Count == 0)
             {
-                ShowCopyDetale(_name, newName, clonedFiles, clonedChildes);
+                ShowCopyDetale(_name, newName, clonedFiles, clonedChildes, sleep);
                 return new Folder(newName, _icon, true, clonedFiles);
             }
 
@@ -83,12 +85,13 @@ namespace Design_Pattern.Prototype
                 Folder newFolder = folder.Clone();
                 clonedChildes.Add(newFolder);
             }
-            ShowCopyDetale(_name, newName, clonedFiles, clonedChildes);
+            ShowCopyDetale(_name, newName, clonedFiles, clonedChildes, sleep);
             return new Folder(newName, _icon, true, clonedFiles, clonedChildes);
         }
-        private void ShowCopyDetale(string prevName, string newName, List<File> files, List<Folder> childes)
+        private void ShowCopyDetale(string prevName, string newName, List<File> files, List<Folder> childes, int ms)
         {
-            var str = $"Copied Folder {_name} , target name {newName} , Folder {childes.Count} , Files {files.Count} , 50 ms";
+
+            var str = $"Copied Folder {_name} , target name {newName} , Folder {childes.Count} , Files {files.Count} , {ms} ms";
             Prototype.AnimatedStr(str, 5);
             //use builder
             Console.WriteLine();

@@ -9,20 +9,25 @@ namespace Design_Pattern.Prototype
         public string _icon { get; set; }
         private bool _cloned { get; set; }
         public DateTime _createAt { get; set; }
-        public File(string name, string icon)
+        private readonly int size;
+        public File(string name, string icon, int size)
         {
+            this.size = size;
             _name = name;
             _icon = icon;
             _cloned = false;
         }
-        public File(string name, string icon, bool cloned)
+        public File(string name, string icon, bool cloned, int size)
         {
+            this.size = size;
             _name = name;
             _icon = icon;
             _cloned = cloned;
+
         }
-        private File(string name, string icon, bool cloned, DateTime createAt)
+        private File(string name, string icon, bool cloned, int size, DateTime createAt)
         {
+            this.size = size;
             _name = name;
             _icon = icon;
             _cloned = cloned;
@@ -30,10 +35,10 @@ namespace Design_Pattern.Prototype
         }
         public File Clone()
         {
-            Thread.Sleep(300);
+            Thread.Sleep(this.size);
             var newName = _name + " (1)";
-            var newFile = new File(newName, _icon, true, new DateTime());
-            var str = $"Copied File {_name} , target name {newName} , 300 ms";
+            var newFile = new File(newName, _icon, true, this.size, new DateTime());
+            var str = $"Copied File {_name} , target name {newName} , {this.size} ms";
             Prototype.AnimatedStr(str, 5);
             Console.WriteLine();
             return newFile;
