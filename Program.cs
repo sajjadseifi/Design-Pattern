@@ -12,6 +12,7 @@ using Design_Pattern.Builder;
 using Design_Pattern.Decorator;
 using Design_Pattern.Factory;
 using Design_Pattern.Memento;
+using Design_Pattern.Prototype;
 using Design_Pattern.Proxy;
 using Design_Pattern.state;
 using Design_Pattern.Strategy;
@@ -62,8 +63,10 @@ namespace design_pattern
             // builder.Run();
             // Decorator decorator = new Decorator();
             // decorator.Run();
-            Adapter adapter = new Adapter();
-            adapter.Run();
+            // Adapter adapter = new Adapter();
+            // adapter.Run();
+            Prototype prototype = new Prototype();
+            prototype.Run();
         }
     }
 }
