@@ -13,6 +13,9 @@ using Design_Pattern.Composite;
 using Design_Pattern.Decorator;
 using Design_Pattern.Facade;
 using Design_Pattern.Factory;
+using Design_Pattern.Interpreter.CodeGate;
+using Design_Pattern.Interpreter.Lang;
+using Design_Pattern.Interpreter.RealWord;
 using Design_Pattern.Memento;
 using Design_Pattern.NullObject;
 using Design_Pattern.Prototype;
@@ -74,8 +77,15 @@ namespace design_pattern
             // composite.Run();
             // Facade facade = new Facade();
             // facade.Run();
-            NullObject no = new NullObject();
-            no.Run();
+            // NullObject no = new NullObject();
+            // no.Run();
+            // Lang lng = new Lang();
+            // lng.Run();
+            // RealWord realWord = new RealWord();
+            // realWord.Run();
+            CodeGate cg = new CodeGate();
+            cg.Run();
         }
+
     }
 }
