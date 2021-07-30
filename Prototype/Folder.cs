@@ -64,7 +64,6 @@ namespace Design_Pattern.Prototype
         }
         public Folder Clone()
         {
-            var start = new DateTime();
             var sleep = 100;
             Thread.Sleep(sleep);
             var clonedFiles = new List<File>();
